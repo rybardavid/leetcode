@@ -1,17 +1,14 @@
 def run(prices: list[int]) -> int:
-    lowestIdx = 0
-    highestIdx = 0
-    highestProfit = 0
+    left = 0
+    right = 1
+    maxProfit = 0
 
-    for idx, price in enumerate(prices):
-        if price < prices[lowestIdx]:
-            lowestIdx = idx
-            highestIdx = idx
-        elif price > prices[lowestIdx]:
-            highestIdx = idx
+    while right < len(prices):
+        if prices[left] < prices[right]:
+            profit = prices[right] - prices[left]
+            maxProfit = max(maxProfit, profit)
+        else:
+            left = right
+        right += 1
 
-        profit = prices[highestIdx] - prices[lowestIdx]
-        if profit > highestProfit:
-            highestProfit = profit
-
-    return highestProfit
+    return maxProfit
