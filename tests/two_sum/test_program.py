@@ -1,5 +1,5 @@
 import pytest
-from src.two_sum import twoSum
+from src.two_sum.program import run
 
 @pytest.mark.parametrize(
         "numbers, target, expected",
@@ -11,4 +11,4 @@ from src.two_sum import twoSum
         ],
 )
 def test_run(numbers: list[int], target: int, expected: list[int]) -> None:
-    assert twoSum(numbers, target) == expected
+    assert run(numbers, target) == expected

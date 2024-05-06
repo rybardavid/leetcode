@@ -1,5 +1,5 @@
 import pytest
-from src.contains_duplicates import run
+from src.contains_duplicates.program import run
 
 @pytest.mark.parametrize(
         "numbers, expected",

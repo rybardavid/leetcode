@@ -1,4 +1,4 @@
-def twoSum(nums: list[int], target: int) -> list[int]:
+def run(nums: list[int], target: int) -> list[int]:
     discoveredNums = {}
     for idx, num in enumerate(nums):
         try:
