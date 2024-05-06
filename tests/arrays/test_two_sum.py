@@ -1,5 +1,5 @@
 import pytest
-from src.two_sum.program import run
+from src.arrays.two_sum import run
 
 @pytest.mark.parametrize(
         "numbers, target, expected",

@@ -1,5 +1,5 @@
 import pytest
-from src.buy_and_sell_stock.program import run
+from src.arrays.buy_and_sell_stock import run
 
 @pytest.mark.parametrize(
         "numbers, expected",
