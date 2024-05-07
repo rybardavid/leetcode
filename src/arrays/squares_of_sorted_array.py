@@ -5,10 +5,10 @@ def run(nums: list[int]) -> list[int]:
 
     while left <= right:
         if abs(nums[left]) > abs(nums[right]):
-            finalNums.insert(0, nums[left] ** 2)
+            finalNums.append(nums[left] ** 2)
             left += 1
         else:
-            finalNums.insert(0, nums[right] ** 2)
+            finalNums.append(nums[right] ** 2)
             right -= 1
 
-    return finalNums
+    return finalNums[::-1]
